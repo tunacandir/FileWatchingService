@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Configuration;
 using System.IO; // Filesystemwatcher bunun içerisinde bulunuyor.
-using System.Runtime.CompilerServices;
-using System.Windows.Forms;
 
 namespace FileWatchingService
 {
@@ -13,7 +10,6 @@ namespace FileWatchingService
         public FileWatcher()
         {
             _fileWatcher = new FileSystemWatcher(PathLocation()); 
-
             _fileWatcher.Created += _fileWatcher_Created;
             _fileWatcher.Renamed += _fileWatcher_Renamed;
             _fileWatcher.Deleted += _fileWatcher_Deleted;
@@ -21,7 +17,6 @@ namespace FileWatchingService
             _fileWatcher.IncludeSubdirectories = true;
             _fileWatcher.EnableRaisingEvents = true;
         }
-        
         
         private string PathLocation()
         {
@@ -35,13 +30,9 @@ namespace FileWatchingService
             }
             catch (Exception ex)
             {
-
             }
-
             return value;
         }
-
-       
 
         private void _fileWatcher_Changed(object sender, FileSystemEventArgs e)
         {
