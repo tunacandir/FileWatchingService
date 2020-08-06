@@ -27,9 +27,9 @@ namespace PathChooser
 
         private void button2_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog2.ShowDialog();
+           /* folderBrowserDialog2.ShowDialog();
             Variables.LogPath = folderBrowserDialog2.SelectedPath;
-            textBox2.Text = Variables.LogPath;
+            textBox2.Text = Variables.LogPath;*/
         }
 
         private void button3_Click(object sender, EventArgs e)
