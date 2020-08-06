@@ -15,10 +15,10 @@ namespace FileWatchingService
         static void Main()
         {
 #if DEBUG
-            Service1 s = new Service1();
-            s.OnDebug();
+            //Service1 s = new Service1();
+            //s.OnDebug();
 
-            System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
+            //System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);
 #else
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]

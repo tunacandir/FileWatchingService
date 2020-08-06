@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using System.IO; // Filesystemwatcher bunun içerisinde bulunuyor.
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace FileWatchingService
 {
@@ -19,14 +21,17 @@ namespace FileWatchingService
             _fileWatcher.IncludeSubdirectories = true;
             _fileWatcher.EnableRaisingEvents = true;
         }
-
+        
+        
         private string PathLocation()
         {
             var value = "";
             try
             {
                 //value = ConfigurationManager.AppSettings.Get("location");
-                value = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                //value = Environment.GetFolderPath(Environment.SpecialFolder.Recent);
+
+                value = Variables.FilePath;
             }
             catch (Exception ex)
             {
